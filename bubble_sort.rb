@@ -1,5 +1,3 @@
-
-
 def bubble_sort(arr)
     len=arr.length
     for i in (0...len) do 
@@ -14,4 +12,6 @@ def bubble_sort(arr)
  return arr;
 end 
 
-print bubble_sort([4,3,78,2,0,2])
+result = bubble_sort([4,3,78,2,0,2])
+
+p result
