@@ -1,19 +1,19 @@
 def bubble_sort_by(arr)
-    len=arr.length
-    for i in (0...len) do 
-        for j in (i+1...len) do
-            if(yield arr[i], arr[j])
-                swap=arr[i]
-                arr[i]=arr[j]
-                arr[j]=swap
-            end
-        end
-    end
- return arr;
-end 
+  len = arr.length
+  (0...len).each do |i|
+    (i + 1...len).each do |j|
+      next unless yield arr[i], arr[j]
 
-result = bubble_sort_by(["hi","hello","hey"]) do  |left, right| 
-    left.length - right.length > 0
+      swap = arr[i]
+      arr[i] = arr[j]
+      arr[j] = swap
+    end
+  end
+  arr
+end
+
+result = bubble_sort_by(%w[hi hello hey]) do |left, right|
+  (left.length - right.length).positive?
 end
 
 p result

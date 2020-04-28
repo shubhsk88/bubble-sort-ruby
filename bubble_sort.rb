@@ -1,17 +1,17 @@
 def bubble_sort(arr)
-    len=arr.length
-    for i in (0...len) do 
-        for j in (i+1...len) do
-            if(arr[i]>arr[j])
-                swap=arr[i]
-                arr[i]=arr[j]
-                arr[j]=swap
-            end
-        end
-    end
- return arr;
-end 
+  len = arr.length
+  (0...len).each do |i|
+    (i + 1...len).each do |j|
+      next unless arr[i] > arr[j]
 
-result = bubble_sort([4,3,78,2,0,2])
+      swap = arr[i]
+      arr[i] = arr[j]
+      arr[j] = swap
+    end
+  end
+  arr
+end
+
+result = bubble_sort([4, 3, 78, 2, 0, 2])
 
 p result
