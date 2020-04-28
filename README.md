@@ -1,6 +1,11 @@
 # Bubble sort ruby
 
-This is a project of two algorithms about bubble sorting in ruby
+This is a project of two algorithms about bubble sorting in ruby.
+
+buble_sort method sorts the elements of an array.
+
+buble_sort_by method sorts the elements of an array depending on the condition in yield.
+
 
 ## Built With
 
